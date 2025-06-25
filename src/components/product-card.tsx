@@ -15,7 +15,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <Card className={cn(
-      "w-full flex flex-col text-center items-center p-6 pt-10 rounded-3xl shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 relative",
+      "w-full max-w-xs flex flex-col text-center items-center p-6 pt-10 rounded-3xl shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 relative",
       product.highlighted ? "bg-primary text-primary-foreground" : "bg-card text-card-foreground"
     )}>
       <div className="absolute -top-12 w-32 h-32 rounded-full overflow-hidden border-4 border-background shadow-lg">
