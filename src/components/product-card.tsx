@@ -36,7 +36,7 @@ export default function ProductCard({ product }: { product: Product }) {
         </p>
         
         <div className="flex justify-between items-center w-full mt-6">
-          <span className="text-2xl font-bold">
+          <span className="text-2xl font-bold font-mono">
             {formatPrice(product.price)}
           </span>
           <Button size="icon" className={cn("rounded-full w-10 h-10", product.highlighted ? "bg-white text-primary hover:bg-white/90" : "bg-primary text-white hover:bg-primary/90")}>
