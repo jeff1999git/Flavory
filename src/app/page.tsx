@@ -57,7 +57,7 @@ export default function Home() {
 
       <footer className="text-center mt-16 py-8 border-t">
         <p className="text-muted-foreground">
-          &copy; {new Date().getFullYear()} Bell. Fresh. All rights reserved.
+          &copy; {new Date().getFullYear()} Flavory All rights reserved.
         </p>
       </footer>
     </div>
