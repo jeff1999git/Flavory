@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Flavory',
-  description: 'Discover a world of fresh, artisanal, and locally sourced foods.',
+  title: 'Bell. Fresh',
+  description: 'Wake Up Early, Eat Fresh & Healthy',
 };
 
 export default function RootLayout({

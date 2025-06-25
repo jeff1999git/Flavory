@@ -1,53 +1,68 @@
 import { products } from '@/lib/data';
-import ProductList from '@/components/product-list';
 import ProductCard from '@/components/product-card';
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
+import { Button } from '@/components/ui/button';
+import { ChevronDown, ShoppingCart, User } from 'lucide-react';
+import Link from 'next/link';
+
+function Navbar() {
+  return (
+    <header className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <nav className="flex items-center justify-between py-6">
+        <div className="flex items-center gap-6 text-sm font-medium text-muted-foreground">
+          <a href="#" className="flex items-center gap-2 hover:text-foreground">
+            <span>🇺🇸</span>
+            <span>USA</span>
+            <ChevronDown className="h-4 w-4" />
+          </a>
+          <a href="#" className="flex items-center gap-2 hover:text-foreground">
+            <User className="h-5 w-5" />
+            <span>Shams</span>
+          </a>
+        </div>
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-8 text-sm font-bold">
+           <Link href="#" className="hover:text-primary transition-colors">Menu</Link>
+           <Link href="/" className="font-headline text-4xl font-black italic">.Bell</Link>
+           <Link href="#" className="hover:text-primary transition-colors">Contact</Link>
+        </div>
+        <Button className="relative rounded-lg font-bold shadow-md bg-foreground text-background hover:bg-foreground/90">
+          <ShoppingCart className="mr-2 h-5 w-5" />
+          My Cart
+          <div className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs font-bold text-black">3</div>
+        </Button>
+      </nav>
+    </header>
+  );
+}
+
 
 export default function Home() {
-  const featuredProducts = products.filter((p) => p.featured);
-
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background text-foreground min-h-screen">
+      <Navbar />
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="text-center mb-16">
           <h1 className="font-headline text-5xl md:text-7xl font-black mb-4 tracking-tight">
-            Flavory
+            Wake Up Early,
+            <br />
+            Eat Fresh & Healthy
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover a world of fresh, artisanal, and locally sourced foods,
-            delivered right to your kitchen.
+            Aside from their natural good taste and great crunchy texture alongside wonderful colors and fragrances, eating a large serving of fresh.
           </p>
         </header>
 
-        <section className="mb-20">
-          <h2 className="font-headline text-4xl font-bold mb-8">
-            Featured Products
-          </h2>
-          <div className="relative">
-            <ScrollArea>
-              <div className="flex space-x-6 pb-4">
-                {featuredProducts.map((product) => (
-                  <div key={product.id} className="w-[300px] flex-shrink-0">
-                    <ProductCard product={product} />
-                  </div>
-                ))}
-              </div>
-              <ScrollBar orientation="horizontal" />
-            </ScrollArea>
+        <section className="mt-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
           </div>
-        </section>
-
-        <section>
-          <h2 className="font-headline text-4xl font-bold mb-8 text-center">
-            All Our Delights
-          </h2>
-          <ProductList products={products} />
         </section>
       </main>
 
-      <footer className="text-center mt-16 py-8 border-t border-border/50">
+      <footer className="text-center mt-16 py-8 border-t">
         <p className="text-muted-foreground">
-          &copy; {new Date().getFullYear()} Flavory. All rights reserved.
+          &copy; {new Date().getFullYear()} Bell. Fresh. All rights reserved.
         </p>
       </footer>
     </div>

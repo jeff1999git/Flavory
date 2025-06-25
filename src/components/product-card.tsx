@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import type { Product } from '@/lib/types';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Plus } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function ProductCard({ product }: { product: Product }) {
   const formatPrice = (price: number) => {
@@ -12,26 +14,35 @@ export default function ProductCard({ product }: { product: Product }) {
   };
 
   return (
-    <Card className="w-full h-full flex flex-col overflow-hidden rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 animate-in fade-in zoom-in-95">
-      <div className="relative w-full h-48">
+    <Card className={cn(
+      "w-full flex flex-col text-center items-center p-6 pt-10 rounded-3xl shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 relative",
+      product.highlighted ? "bg-primary text-primary-foreground" : "bg-card text-card-foreground"
+    )}>
+      <div className="absolute -top-12 w-32 h-32 rounded-full overflow-hidden border-4 border-background shadow-lg">
         <Image
           src={product.imageUrl}
           alt={product.name}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover"
+          width={128}
+          height={128}
+          className="object-cover w-full h-full"
           data-ai-hint={product.dataAiHint}
         />
       </div>
-      <CardHeader>
-        <div className="flex justify-between items-start gap-2">
-          <CardTitle className="text-xl font-bold font-headline leading-tight">{product.name}</CardTitle>
-          <div className="text-lg font-bold text-primary flex-shrink-0">{formatPrice(product.price)}</div>
+      
+      <CardContent className="p-0 flex flex-col items-center flex-grow w-full">
+        <h3 className="font-headline text-xl font-bold mt-16">{product.name}</h3>
+        <p className={cn("text-sm mt-2", product.highlighted ? "text-primary-foreground/80" : "text-muted-foreground")}>
+          {product.calories} calories • {product.servings} persons
+        </p>
+        
+        <div className="flex justify-between items-center w-full mt-6">
+          <span className="text-2xl font-bold">
+            {formatPrice(product.price)}
+          </span>
+          <Button size="icon" className={cn("rounded-full w-10 h-10", product.highlighted ? "bg-white text-primary hover:bg-white/90" : "bg-primary text-white hover:bg-primary/90")}>
+            <Plus className="h-6 w-6" />
+          </Button>
         </div>
-        <Badge variant="secondary" className="mt-1 w-fit">{product.category}</Badge>
-      </CardHeader>
-      <CardContent className="flex-grow">
-        <CardDescription>{product.description}</CardDescription>
       </CardContent>
     </Card>
   );
