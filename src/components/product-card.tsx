@@ -18,13 +18,13 @@ export default function ProductCard({ product }: { product: Product }) {
       "w-full max-w-[17rem] flex flex-col text-center items-center p-6 rounded-3xl shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 overflow-visible",
       product.highlighted ? "bg-primary text-primary-foreground" : "bg-card text-card-foreground"
     )}>
-      <div className="relative w-full h-32">
+      <div className="relative w-full h-36">
         <Image
           src={product.imageUrl}
           alt={product.name}
-          width={180}
-          height={180}
-          className="object-contain drop-shadow-lg absolute -top-24 left-1/2 -translate-x-1/2"
+          width={220}
+          height={220}
+          className="object-contain drop-shadow-lg absolute -top-28 left-1/2 -translate-x-1/2"
           data-ai-hint={product.dataAiHint}
         />
       </div>
