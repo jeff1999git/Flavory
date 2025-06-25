@@ -3,24 +3,20 @@
 import { useState, useMemo } from 'react';
 import type { Product } from '@/lib/types';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
 import ProductCard from '@/components/product-card';
 import { Search } from 'lucide-react';
 
-const categories: (Product['category'] | 'All')[] = ['All', 'Bakery', 'Produce', 'Dairy', 'Meat', 'Pantry'];
-
 export default function ProductList({ products }: { products: Product[] }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<Product['category'] | 'All'>('All');
 
   const filteredProducts = useMemo(() => {
+    if (!searchTerm) return products;
     return products.filter(product => {
-      const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
       const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             product.description.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;
+      return matchesSearch;
     });
-  }, [products, searchTerm, selectedCategory]);
+  }, [products, searchTerm]);
 
   return (
     <div>
@@ -35,18 +31,6 @@ export default function ProductList({ products }: { products: Product[] }) {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-        </div>
-        <div className="flex gap-2 flex-wrap justify-center">
-          {categories.map(category => (
-            <Button
-              key={category}
-              variant={selectedCategory === category ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory(category)}
-              className="rounded-full"
-            >
-              {category}
-            </Button>
-          ))}
         </div>
       </div>
       

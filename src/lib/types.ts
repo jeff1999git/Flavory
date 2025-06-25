@@ -3,8 +3,7 @@ export interface Product {
   name: string;
   price: number;
   imageUrl: string;
-  calories: number;
-  servings: number;
+  description: string;
   highlighted?: boolean;
   dataAiHint: string;
 }

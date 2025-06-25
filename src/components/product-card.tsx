@@ -31,8 +31,8 @@ export default function ProductCard({ product }: { product: Product }) {
       
       <CardContent className="p-0 flex flex-col items-center flex-grow w-full">
         <h3 className="font-headline text-xl font-bold mt-20">{product.name}</h3>
-        <p className={cn("text-sm mt-2", product.highlighted ? "text-primary-foreground/80" : "text-muted-foreground")}>
-          {product.calories} calories • {product.servings} persons
+        <p className={cn("text-sm mt-2 flex-grow", product.highlighted ? "text-primary-foreground/80" : "text-muted-foreground")}>
+          {product.description}
         </p>
         
         <div className="flex justify-between items-center w-full mt-8">
