@@ -1,21 +1,28 @@
 import { products } from '@/lib/data';
 import ProductCard from '@/components/product-card';
-import { User } from 'lucide-react';
+import { User, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 function Navbar() {
   return (
     <header className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <nav className="flex items-center justify-end py-6">
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-8 text-sm font-bold">
-           <Link href="#" className="hover:text-primary transition-colors">Menu</Link>
-           <Link href="/" className="font-headline text-4xl font-black italic">Flavory</Link>
-           <Link href="#" className="hover:text-primary transition-colors">Contact</Link>
+      <nav className="flex items-center justify-between py-6">
+        <div>
+          <Button asChild variant="outline" className="font-bold">
+            <Link href="#">Contact</Link>
+          </Button>
         </div>
-        <div className="flex items-center gap-6 text-sm font-medium text-muted-foreground">
-          <a href="#" className="flex items-center gap-2 hover:text-foreground">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+           <Link href="/" className="font-headline text-4xl font-black italic">Flavory</Link>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Shopping cart">
+            <ShoppingCart className="h-5 w-5" />
+          </Button>
+          <Button variant="ghost" size="icon" aria-label="User profile">
             <User className="h-5 w-5" />
-          </a>
+          </Button>
         </div>
       </nav>
     </header>
