@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Bell. Fresh',
-  description: 'Wake Up Early, Eat Fresh & Healthy',
+  title: 'Flavory',
+  description: 'Start Fresh, Start Pure',
 };
 
 export default function RootLayout({
