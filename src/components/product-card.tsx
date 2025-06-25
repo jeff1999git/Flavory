@@ -15,22 +15,22 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <Card className={cn(
-      "w-full max-w-[17rem] flex flex-col text-center items-center p-6 pt-10 rounded-3xl shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 relative",
+      "w-full max-w-[17rem] flex flex-col text-center items-center p-6 rounded-3xl shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 overflow-visible",
       product.highlighted ? "bg-primary text-primary-foreground" : "bg-card text-card-foreground"
     )}>
-      <div className="absolute -top-12 w-32 h-32 rounded-full overflow-hidden border-4 border-background shadow-lg">
+      <div className="relative w-full h-32">
         <Image
           src={product.imageUrl}
           alt={product.name}
-          width={128}
-          height={128}
-          className="object-cover w-full h-full"
+          width={180}
+          height={180}
+          className="object-contain drop-shadow-lg absolute -top-24 left-1/2 -translate-x-1/2"
           data-ai-hint={product.dataAiHint}
         />
       </div>
       
       <CardContent className="p-0 flex flex-col items-center flex-grow w-full">
-        <h3 className="font-headline text-xl font-bold mt-20">{product.name}</h3>
+        <h3 className="font-headline text-xl font-bold">{product.name}</h3>
         <p className={cn("text-sm mt-2 flex-grow", product.highlighted ? "text-primary-foreground/80" : "text-muted-foreground")}>
           {product.description}
         </p>
