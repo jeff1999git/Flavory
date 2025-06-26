@@ -27,7 +27,7 @@ export default function CartPage() {
   };
   
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const shipping = 50; 
+  const shipping = subtotal > 500 ? 0 : 50; 
   const total = subtotal + shipping;
 
   return (
@@ -105,7 +105,7 @@ export default function CartPage() {
                   </div>
                   <div className="flex justify-between">
                     <span>Shipping</span>
-                    <span className="font-mono">{formatPrice(shipping)}</span>
+                    <span className="font-mono">{shipping > 0 ? formatPrice(shipping) : 'Free'}</span>
                   </div>
                   <Separator />
                   <div className="flex justify-between font-bold text-lg">
