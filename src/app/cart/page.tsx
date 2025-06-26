@@ -34,7 +34,7 @@ export default function CartPage() {
     <div className="bg-background text-foreground min-h-screen">
       <Navbar />
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-3xl font-bold mb-8">Your Cart</h1>
+        <h1 className="text-3xl font-bold font-headline mb-8">Your Cart</h1>
         {cartItems.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
@@ -50,8 +50,8 @@ export default function CartPage() {
                       data-ai-hint={item.dataAiHint}
                     />
                     <div className="ml-4 flex-grow">
-                      <h2 className="font-semibold">{item.name}</h2>
-                      <p className="text-sm text-muted-foreground">{formatPrice(item.price)}</p>
+                      <h2 className="font-semibold font-headline">{item.name}</h2>
+                      <p className="text-sm text-muted-foreground font-mono">{formatPrice(item.price)}</p>
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="flex items-center border rounded-md">
@@ -78,7 +78,7 @@ export default function CartPage() {
                           +
                         </Button>
                       </div>
-                      <p className="font-semibold w-20 text-right">{formatPrice(item.price * item.quantity)}</p>
+                      <p className="font-semibold font-mono w-20 text-right">{formatPrice(item.price * item.quantity)}</p>
                       <Button
                         variant="ghost"
                         size="icon"
@@ -96,21 +96,21 @@ export default function CartPage() {
             <div className="lg:col-span-1">
               <Card>
                 <CardHeader>
-                  <CardTitle>Order Summary</CardTitle>
+                  <CardTitle className="font-headline">Order Summary</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex justify-between">
                     <span>Subtotal</span>
-                    <span>{formatPrice(subtotal)}</span>
+                    <span className="font-mono">{formatPrice(subtotal)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Shipping</span>
-                    <span>{formatPrice(shipping)}</span>
+                    <span className="font-mono">{formatPrice(shipping)}</span>
                   </div>
                   <Separator />
                   <div className="flex justify-between font-bold text-lg">
                     <span>Total</span>
-                    <span>{formatPrice(total)}</span>
+                    <span className="font-mono">{formatPrice(total)}</span>
                   </div>
                 </CardContent>
                 <CardFooter>
@@ -123,7 +123,7 @@ export default function CartPage() {
           </div>
         ) : (
           <div className="text-center py-20">
-            <h2 className="text-2xl font-semibold mb-2">Your cart is empty</h2>
+            <h2 className="text-2xl font-headline font-semibold mb-2">Your cart is empty</h2>
             <p className="text-muted-foreground mb-6">Looks like you haven't added anything to your cart yet.</p>
             <Button asChild>
               <Link href="/">Continue Shopping</Link>
