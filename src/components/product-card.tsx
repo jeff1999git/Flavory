@@ -4,13 +4,14 @@ import Image from 'next/image';
 import type { Product } from '@/lib/types';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Plus, Trash2 } from 'lucide-react';
+import { Plus, Trash2, Minus } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useCart } from '@/context/cart-context';
 
 export default function ProductCard({ product }: { product: Product }) {
-  const { addToCart, removeFromCart, isItemInCart } = useCart();
-  const inCart = isItemInCart(product.id);
+  const { addToCart, removeFromCart, updateQuantity, cartItems } = useCart();
+  const cartItem = cartItems.find((item) => item.id === product.id);
+  const inCart = !!cartItem;
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-IN', {
@@ -30,6 +31,14 @@ export default function ProductCard({ product }: { product: Product }) {
     e.preventDefault();
     removeFromCart(product.id);
   }
+
+  const handleQuantityChange = (e: React.MouseEvent, amount: number) => {
+    e.stopPropagation();
+    e.preventDefault();
+    if (cartItem) {
+      updateQuantity(product.id, cartItem.quantity + amount);
+    }
+  };
 
   return (
     <Card className={cn(
@@ -58,9 +67,20 @@ export default function ProductCard({ product }: { product: Product }) {
             {formatPrice(product.price)}
           </span>
           {inCart ? (
-            <Button size="icon" variant="destructive" className={cn("rounded-full w-10 h-10")} onClick={handleRemoveClick}>
-              <Trash2 className="h-6 w-6" />
-            </Button>
+            <div className="flex items-center gap-2">
+              <div className="flex items-center border rounded-full">
+                <Button variant="ghost" size="icon" className="w-8 h-8 rounded-full" onClick={(e) => handleQuantityChange(e, -1)}>
+                  <Minus className="h-4 w-4" />
+                </Button>
+                <span className="w-4 text-center font-bold text-sm">{cartItem.quantity}</span>
+                <Button variant="ghost" size="icon" className="w-8 h-8 rounded-full" onClick={(e) => handleQuantityChange(e, 1)}>
+                  <Plus className="h-4 w-4" />
+                </Button>
+              </div>
+              <Button variant="destructive" size="icon" className="w-8 h-8 rounded-full" onClick={handleRemoveClick}>
+                  <Trash2 className="h-4 w-4" />
+              </Button>
+            </div>
           ) : (
             <Button size="icon" className={cn("rounded-full w-10 h-10", product.highlighted ? "bg-white text-primary hover:bg-white/90" : "bg-primary text-white hover:bg-primary/90")} onClick={handleAddClick}>
               <Plus className="h-6 w-6" />
