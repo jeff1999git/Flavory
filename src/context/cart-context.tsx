@@ -24,6 +24,8 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const { toast } = useToast();
 
   const addToCart = (product: Product) => {
+    const isNewItem = !cartItems.some(item => item.id === product.id);
+
     setCartItems((prevItems) => {
       const itemExists = prevItems.find((item) => item.id === product.id);
       if (itemExists) {
@@ -31,26 +33,29 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
         );
       }
+      return [...prevItems, { ...product, quantity: 1 }];
+    });
+
+    if (isNewItem) {
       toast({
         title: "Added to cart",
         description: `${product.name} has been added to your cart.`,
       });
-      return [...prevItems, { ...product, quantity: 1 }];
-    });
+    }
   };
 
   const removeFromCart = (productId: string) => {
-    setCartItems((prevItems) => {
-      const itemToRemove = prevItems.find(item => item.id === productId);
-      if (itemToRemove) {
-        toast({
-          title: "Removed from cart",
-          description: `${itemToRemove.name} has been removed from your cart.`,
-          variant: 'destructive'
-        });
-      }
-      return prevItems.filter((item) => item.id !== productId)
-    });
+    const itemToRemove = cartItems.find(item => item.id === productId);
+
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== productId));
+
+    if (itemToRemove) {
+      toast({
+        title: "Removed from cart",
+        description: `${itemToRemove.name} has been removed from your cart.`,
+        variant: 'destructive'
+      });
+    }
   };
 
   const updateQuantity = (productId: string, newQuantity: number) => {
