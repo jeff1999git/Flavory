@@ -1,17 +1,35 @@
+'use client';
+
 import Image from 'next/image';
 import type { Product } from '@/lib/types';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Plus } from 'lucide-react';
+import { Plus, Trash2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useCart } from '@/context/cart-context';
 
 export default function ProductCard({ product }: { product: Product }) {
+  const { addToCart, removeFromCart, isItemInCart } = useCart();
+  const inCart = isItemInCart(product.id);
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-IN', {
       style: 'currency',
       currency: 'INR',
     }).format(price);
   };
+
+  const handleAddClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    addToCart(product);
+  }
+
+  const handleRemoveClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    removeFromCart(product.id);
+  }
 
   return (
     <Card className={cn(
@@ -39,9 +57,15 @@ export default function ProductCard({ product }: { product: Product }) {
           <span className="text-2xl font-bold font-mono">
             {formatPrice(product.price)}
           </span>
-          <Button size="icon" className={cn("rounded-full w-10 h-10", product.highlighted ? "bg-white text-primary hover:bg-white/90" : "bg-primary text-white hover:bg-primary/90")}>
-            <Plus className="h-6 w-6" />
-          </Button>
+          {inCart ? (
+            <Button size="icon" variant="destructive" className={cn("rounded-full w-10 h-10")} onClick={handleRemoveClick}>
+              <Trash2 className="h-6 w-6" />
+            </Button>
+          ) : (
+            <Button size="icon" className={cn("rounded-full w-10 h-10", product.highlighted ? "bg-white text-primary hover:bg-white/90" : "bg-primary text-white hover:bg-primary/90")} onClick={handleAddClick}>
+              <Plus className="h-6 w-6" />
+            </Button>
+          )}
         </div>
       </CardContent>
     </Card>

@@ -9,32 +9,15 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Trash2 } from 'lucide-react';
-import { products } from '@/lib/data';
-
-const initialCartItem = {
-  ...products[0],
-  quantity: 1,
-};
+import { useCart } from '@/context/cart-context';
 
 export default function CartPage() {
-  const [cartItems, setCartItems] = useState([initialCartItem]);
+  const { cartItems, updateQuantity, removeFromCart } = useCart();
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear());
   }, []);
-
-  const updateQuantity = (productId: string, newQuantity: number) => {
-    setCartItems(
-      cartItems.map((item) =>
-        item.id === productId ? { ...item, quantity: Math.max(0, newQuantity) } : item
-      )
-    );
-  };
-
-  const removeItem = (productId: string) => {
-    setCartItems(cartItems.filter((item) => item.id !== productId));
-  };
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-IN', {
@@ -100,7 +83,7 @@ export default function CartPage() {
                         variant="ghost"
                         size="icon"
                         className="text-muted-foreground hover:text-destructive"
-                        onClick={() => removeItem(item.id)}
+                        onClick={() => removeFromCart(item.id)}
                       >
                         <Trash2 className="h-5 w-5" />
                       </Button>
