@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Youtube, Phone, Mail } from 'lucide-react';
+import { Instagram, Youtube, Phone, Mail, Facebook } from 'lucide-react';
 
 const socialLinks = [
   { icon: <Instagram className="h-6 w-6" />, href: '#', name: 'Instagram' },
   { icon: <Youtube className="h-6 w-6" />, href: '#', name: 'Youtube' },
+  { icon: <Facebook className="h-6 w-6" />, href: '#', name: 'Facebook' },
 ];
 
 const linkSections = [
