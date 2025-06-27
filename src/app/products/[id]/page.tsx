@@ -114,6 +114,13 @@ export default function ProductDetailPage() {
                  </ul>
               </CardContent>
             </Card>
+
+            <Card>
+              <CardContent className="p-6 text-sm text-muted-foreground space-y-4">
+                <div className="flex items-center gap-2"><Truck/> <b>Shipping & Returns:</b> {details.shipping}</div>
+                <div className="flex items-start gap-2"><Info/> <b>Disclaimer:</b> {details.disclaimer}</div>
+              </CardContent>
+            </Card>
           </div>
 
           <div className="space-y-8">
@@ -166,11 +173,6 @@ export default function ProductDetailPage() {
                   </ul>
                 </CardContent>
               </Card>
-            </div>
-
-            <div className="space-y-4 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2"><Truck/> <b>Shipping & Returns:</b> {details.shipping}</div>
-              <div className="flex items-start gap-2"><Info/> <b>Disclaimer:</b> {details.disclaimer}</div>
             </div>
           </div>
         </div>

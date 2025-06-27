@@ -11,7 +11,7 @@ export const products: Product[] = [
     details: {
       title: 'Green Chilli Powder',
       tagline: 'Pure. Spicy. Powerful.',
-      description: 'Bring bold heat and natural health to your meals with Flavory’s premium Green Chilli Powder, made from 100% sun-dried, farm-fresh green chillies — finely ground to preserve flavor, color, and potency.',
+      description: 'Bring bold heat and natural health to your meals with Flavory’s premium Green Chilli Powder, made from farm-fresh green chillies — finely ground to preserve flavor, color, and potency.',
       detailImageUrl: 'https://res.cloudinary.com/doelglurk/image/upload/v1751139417/woman-eating_v9xwrf.jpg',
       benefits: [
         'Rich in Antioxidants – Boosts immunity and helps fight free radicals',
@@ -40,7 +40,7 @@ export const products: Product[] = [
       whyChoose: [
         '100% Natural Ingredients',
         'No Artificial Colors or Preservatives',
-        'Hygienically Processed at Kerala Agricultural University Business Incubator',
+        'Tested at Kerala Agricultural University Business Incubator, Thrissur',
         'Packed with care for purity, flavor & safety',
       ],
       shipping: 'Dispatched within 24 hours. Standard delivery: 2–5 business days (India). Secure payment options available. Easy return or replacement for damaged items.',
