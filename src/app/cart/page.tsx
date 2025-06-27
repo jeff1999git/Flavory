@@ -10,9 +10,13 @@ import { Separator } from '@/components/ui/separator';
 import { Trash2 } from 'lucide-react';
 import { useCart } from '@/context/cart-context';
 import Footer from '@/components/footer';
+import { useToast } from '@/hooks/use-toast';
+import { useRouter } from 'next/navigation';
 
 export default function CartPage() {
   const { cartItems, updateQuantity, removeFromCart } = useCart();
+  const { toast } = useToast();
+  const router = useRouter();
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-IN', {
@@ -24,6 +28,15 @@ export default function CartPage() {
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const shipping = subtotal > 500 ? 0 : 50; 
   const total = subtotal + shipping;
+
+  const handleCheckout = () => {
+    toast({
+      title: 'Checkout Unavailable',
+      description: 'Delivery is not possible right now. Please contact us.',
+      variant: 'destructive',
+    });
+    router.push('/contact');
+  };
 
   return (
     <div className="bg-background text-foreground min-h-screen">
@@ -109,7 +122,7 @@ export default function CartPage() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full" size="lg">
+                  <Button className="w-full" size="lg" onClick={handleCheckout}>
                     Proceed to Checkout
                   </Button>
                 </CardFooter>
