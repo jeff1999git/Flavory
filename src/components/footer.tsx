@@ -1,7 +1,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Youtube, Phone, Mail, Facebook, MessageSquare } from 'lucide-react';
+import { Instagram, Youtube, Phone, Mail, Facebook } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 
 const socialLinks = [
   { icon: <Instagram className="h-6 w-6" />, href: '#', name: 'Instagram' },
@@ -22,7 +23,7 @@ const linkSections = [
 
 const policyLinks = [
     { name: 'About Us', href: '/about' },
-    { name: 'Privacy Policy', href: '#' },
+    { name: 'Privacy Policy', href: '/about#privacy-policy' },
     { name: 'Refund & Return Policy', href: '#' },
     { name: 'Shipping Policy', href: '#' },
     { name: 'Terms Of Service', href: '#' },
