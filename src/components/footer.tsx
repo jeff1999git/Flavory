@@ -15,17 +15,12 @@ const linkSections = [
   {
     title: 'Categories',
     links: [
-      { name: 'Assorted', href: '#' },
-      { name: 'Unbeatable Deal', href: '#' },
-      { name: 'Combo', href: '#' },
-      { name: 'Fruit', href: '#' },
-      { name: 'Single Variety', href: '#' },
+      { name: 'Powders', href: '#' },
     ],
   },
   {
     title: 'Resources',
     links: [
-      { name: 'Help Center', href: '#' },
       { name: 'Contact Us', href: '#' },
       { name: 'About Us', href: '#' },
       { name: 'Shipping Policy', href: '#' },
