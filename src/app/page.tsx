@@ -1,6 +1,7 @@
 import { products } from '@/lib/data';
 import ProductCard from '@/components/product-card';
 import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 export default function Home() {
   return (
@@ -25,11 +26,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="text-center mt-16 py-8 border-t">
-        <p className="text-muted-foreground">
-          &copy; {new Date().getFullYear()} Flavory All rights reserved.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }

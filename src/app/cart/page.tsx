@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/navbar';
@@ -10,14 +9,10 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Separator } from '@/components/ui/separator';
 import { Trash2 } from 'lucide-react';
 import { useCart } from '@/context/cart-context';
+import Footer from '@/components/footer';
 
 export default function CartPage() {
   const { cartItems, updateQuantity, removeFromCart } = useCart();
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-IN', {
@@ -131,11 +126,7 @@ export default function CartPage() {
           </div>
         )}
       </main>
-      <footer className="text-center mt-16 py-8 border-t">
-        <p className="text-muted-foreground">
-          &copy; {currentYear} Flavory All rights reserved.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
