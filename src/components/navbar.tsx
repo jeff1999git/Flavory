@@ -24,8 +24,8 @@ export default function Navbar() {
             <Image
               src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png"
               alt="Flavory Logo"
-              width={50}
-              height={50}
+              width={70}
+              height={70}
               data-ai-hint="logo"
             />
            </Link>
