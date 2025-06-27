@@ -2,6 +2,7 @@
 
 import { User, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import { Badge } from '@/components/ui/badge';
@@ -19,7 +20,15 @@ export default function Navbar() {
           </Button>
         </div>
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-           <Link href="/" className="font-headline text-4xl font-black italic">Flavory</Link>
+           <Link href="/">
+            <Image
+              src="https://placehold.co/120x40.png"
+              alt="Flavory Logo"
+              width={120}
+              height={40}
+              data-ai-hint="logo"
+            />
+           </Link>
         </div>
         <div className="flex items-center gap-2">
           <Button asChild variant="ghost" size="icon" aria-label="Shopping cart" className="relative">
