@@ -18,19 +18,19 @@ export default function AboutPage() {
             
             <div className="space-y-10">
               <div>
-                <h2 className="font-headline text-3xl font-bold mb-4">How Flavory Works</h2>
+                <h2 className="font-headline text-3xl font-bold mb-4">How <Link href="/" className="text-primary hover:underline">Flavory</Link> Works</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Flavory is a brand born from a passion for purity, health, and natural taste. We specialize in dehydrated powders made from fresh, locally sourced ingredients like green chilli, onion, mixed vegetables (ABC), and baby nutrition blends. Our mission is to make everyday cooking easier, healthier, and more flavorful — without compromising on quality or authenticity.
+                  <Link href="/" className="text-primary hover:underline">Flavory</Link> is a brand born from a passion for purity, health, and natural taste. We specialize in dehydrated powders made from fresh, locally sourced ingredients like green chilli, onion, mixed vegetables (ABC), and baby nutrition blends. Our mission is to make everyday cooking easier, healthier, and more flavorful — without compromising on quality or authenticity.
                 </p>
                 <p className="text-lg text-muted-foreground mt-4 leading-relaxed">
-                  Every product is crafted with care, preserving nutrients and taste through advanced dehydration methods. Whether you're a home cook, health-conscious parent, or food manufacturer, Flavory brings convenience and nutrition to your kitchen in its most natural form.
+                  Every product is crafted with care, preserving nutrients and taste through advanced dehydration methods. Whether you're a home cook, health-conscious parent, or food manufacturer, <Link href="/" className="text-primary hover:underline">Flavory</Link> brings convenience and nutrition to your kitchen in its most natural form.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-headline text-3xl font-bold mb-4">Why Flavory is the Best Choice for You</h2>
+                <h2 className="font-headline text-3xl font-bold mb-4">Why <Link href="/" className="text-primary hover:underline">Flavory</Link> is the Best Choice for You</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  At Flavory, we go beyond just selling powders — we deliver nature in a pack.
+                  At <Link href="/" className="text-primary hover:underline">Flavory</Link>, we go beyond just selling powders — we deliver nature in a pack.
                 </p>
                 <ul className="space-y-4 mt-6">
                   <li className="flex items-start">
@@ -59,7 +59,7 @@ export default function AboutPage() {
                   </li>
                 </ul>
                 <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
-                  Whether it’s a spicy green chilli kick, onion flavor boost, or a nutritious baby blend — Flavory is your go-to partner for clean, natural, and delicious food powders.
+                  Whether it’s a spicy green chilli kick, onion flavor boost, or a nutritious baby blend — <Link href="/" className="text-primary hover:underline">Flavory</Link> is your go-to partner for clean, natural, and delicious food powders.
                 </p>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="font-headline text-3xl font-bold mb-4">Data Collection</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  At Flavory, we collect customer information including names, contact details, and delivery addresses to facilitate the delivery of our products and enhance your overall experience. We do not store payment credentials, ensuring your financial data remains safe and secure.
+                  At <Link href="/" className="text-primary hover:underline">Flavory</Link>, we collect customer information including names, contact details, and delivery addresses to facilitate the delivery of our products and enhance your overall experience. We do not store payment credentials, ensuring your financial data remains safe and secure.
                 </p>
               </div>
               <div>
@@ -87,13 +87,13 @@ export default function AboutPage() {
               <div>
                 <h2 className="font-headline text-3xl font-bold mb-4">Data Security</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We take data security seriously at Flavory. Robust measures are in place to protect your information from unauthorized access, loss, or alteration. Your data is stored securely, and we continuously review and strengthen our security protocols.
+                  We take data security seriously at <Link href="/" className="text-primary hover:underline">Flavory</Link>. Robust measures are in place to protect your information from unauthorized access, loss, or alteration. Your data is stored securely, and we continuously review and strengthen our security protocols.
                 </p>
               </div>
               <div>
                 <h2 className="font-headline text-3xl font-bold mb-4">Data Sharing</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Flavory does not sell, rent, or disclose your data to third parties. We deeply value your trust and are committed to upholding your privacy at every step.
+                  <Link href="/" className="text-primary hover:underline">Flavory</Link> does not sell, rent, or disclose your data to third parties. We deeply value your trust and are committed to upholding your privacy at every step.
                 </p>
               </div>
               <div>
@@ -108,7 +108,7 @@ export default function AboutPage() {
                   As a valued customer, you have the right to access, update, or request deletion of your personal data. If you have any concerns or requests regarding your information, please reach out to us using the contact details provided on our website.
                 </p>
                 <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
-                  At Flavory, your privacy is our priority. We are committed to handling your data responsibly and in accordance with the highest standards of privacy and security.
+                  At <Link href="/" className="text-primary hover:underline">Flavory</Link>, your privacy is our priority. We are committed to handling your data responsibly and in accordance with the highest standards of privacy and security.
                 </p>
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function AboutPage() {
             <div className="space-y-10">
               <div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  At Flavory, we are committed to providing fast, reliable, and safe shipping services to ensure your orders arrive on time and in excellent condition. Please review the details of our shipping policies below:
+                  At <Link href="/" className="text-primary hover:underline">Flavory</Link>, we are committed to providing fast, reliable, and safe shipping services to ensure your orders arrive on time and in excellent condition. Please review the details of our shipping policies below:
                 </p>
               </div>
               <div>
@@ -192,7 +192,7 @@ export default function AboutPage() {
                   While we strive for timely delivery, delays due to weather, courier issues, or other unforeseen events may occur.
                 </p>
                 <p className="text-lg text-muted-foreground mt-4 leading-relaxed font-semibold">
-                  ⚠️ Please note: Flavory is not liable for damages incurred during transit. Refunds or replacements for such cases may not be possible.
+                  ⚠️ Please note: <Link href="/" className="text-primary hover:underline">Flavory</Link> is not liable for damages incurred during transit. Refunds or replacements for such cases may not be possible.
                 </p>
               </div>
               <div>
@@ -216,7 +216,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="font-headline text-3xl font-bold mb-4">Policy Updates</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Flavory reserves the right to change this shipping policy at any time without prior notice.
+                  <Link href="/" className="text-primary hover:underline">Flavory</Link> reserves the right to change this shipping policy at any time without prior notice.
                 </p>
                 <p className="text-lg text-muted-foreground mt-4 leading-relaxed">
                   Any changes will be reflected on this page, so we recommend checking back regularly for updates.
@@ -245,7 +245,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="font-headline text-3xl font-bold mb-4">1. User Agreement</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  By using the Flavory website or any of our services, you agree to be bound by these Terms of Service. Please read them carefully before using the platform.
+                  By using the <Link href="/" className="text-primary hover:underline">Flavory</Link> website or any of our services, you agree to be bound by these Terms of Service. Please read them carefully before using the platform.
                 </p>
               </div>
               <div>
@@ -269,7 +269,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="font-headline text-3xl font-bold mb-4">5. Intellectual Property</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  All content, logos, product names, designs, trademarks, and copyrights on the Flavory platform are the property of Calicut Cousins Private Limited or its licensors, and are protected under applicable intellectual property laws.
+                  All content, logos, product names, designs, trademarks, and copyrights on the <Link href="/" className="text-primary hover:underline">Flavory</Link> platform are the property of Calicut Cousins Private Limited or its licensors, and are protected under applicable intellectual property laws.
                 </p>
               </div>
               <div>
@@ -287,7 +287,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="font-headline text-3xl font-bold mb-4">8. Dispute Resolution</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Any disputes between users or involving Flavory will be governed by the laws of India. Disputes shall be subject to the jurisdiction of the courts located in Kerala, unless otherwise specified.
+                  Any disputes between users or involving <Link href="/" className="text-primary hover:underline">Flavory</Link> will be governed by the laws of India. Disputes shall be subject to the jurisdiction of the courts located in Kerala, unless otherwise specified.
                 </p>
               </div>
               <div>
