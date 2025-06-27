@@ -32,6 +32,21 @@ export default function ProductList({ products }: { products: Product[] }) {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
+<<<<<<< HEAD
+=======
+        <div className="flex gap-2 flex-wrap justify-center">
+          {categories.map(category => (
+            <Button
+              key={category}
+              variant={selectedCategory === category ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory(category)}
+              className="rounded-full"
+            >
+              {category}
+            </Button>
+          ))}
+        </div>
+>>>>>>> 43dbe25 (Updated app)
       </div>
       
       {filteredProducts.length > 0 ? (
