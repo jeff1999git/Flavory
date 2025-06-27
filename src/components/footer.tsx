@@ -19,6 +19,13 @@ const linkSections = [
       { name: 'About Us', href: '#' },
     ],
   },
+  {
+    title: 'Contact Us',
+    links: [
+      { name: 'contactflavory@gmail.com', href: 'mailto:contactflavory@gmail.com' },
+      { name: '+91 95671 10457', href: 'https://wa.me/919567110457' },
+    ],
+  },
 ];
 
 const policyLinks = [
@@ -33,7 +40,7 @@ export default function Footer() {
     <footer className="bg-background border-t mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
+          <div className="md:col-span-1">
             <Link href="/" className="mb-4 inline-block">
               <Image
                 src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png"
@@ -52,20 +59,22 @@ export default function Footer() {
             </div>
           </div>
 
-          {linkSections.map((section) => (
-            <div key={section.title}>
-              <h3 className="font-bold text-foreground mb-4">{section.title}</h3>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <Link href={link.href} className="text-muted-foreground hover:text-primary text-sm">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {linkSections.map((section) => (
+              <div key={section.title}>
+                <h3 className="font-bold text-foreground mb-4">{section.title}</h3>
+                <ul className="space-y-2">
+                  {section.links.map((link) => (
+                    <li key={link.name}>
+                      <Link href={link.href} className="text-muted-foreground hover:text-primary text-sm">
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 border-t">
