@@ -1,6 +1,6 @@
 'use client';
 
-import { User, ShoppingCart } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -16,7 +16,7 @@ export default function Navbar() {
       <nav className="flex items-center justify-between py-6">
         <div>
           <Button asChild variant="outline" className="font-bold">
-            <Link href="#">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </Button>
         </div>
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -38,9 +38,6 @@ export default function Navbar() {
                 <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 justify-center p-0">{cartCount}</Badge>
               )}
             </Link>
-          </Button>
-          <Button variant="ghost" size="icon" aria-label="User profile">
-            <User className="h-5 w-5" />
           </Button>
         </div>
       </nav>
