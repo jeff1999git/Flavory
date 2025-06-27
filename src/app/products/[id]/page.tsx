@@ -70,7 +70,7 @@ export default function ProductDetailPage() {
                 alt={product.name}
                 layout="fill"
                 objectFit="cover"
-                data-ai-hint="woman eating"
+                data-ai-hint="indian food"
               />
             </div>
             
