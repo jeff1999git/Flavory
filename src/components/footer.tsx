@@ -31,8 +31,8 @@ export default function Footer() {
   return (
     <footer className="bg-background border-t mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
             <Link href="/" className="mb-4 inline-block">
               <Image
                 src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png"
@@ -51,7 +51,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="md:justify-self-end">
             {linkSections.map((section) => (
               <div key={section.title}>
                 <h3 className="font-bold text-foreground mb-4">{section.title}</h3>
