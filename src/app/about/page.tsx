@@ -112,6 +112,21 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+
+          <Separator className="my-16" />
+
+          <div id="refund-policy" className="scroll-mt-20">
+            <h1 className="font-headline text-4xl md:text-5xl font-bold mb-12 text-center">
+              Refund & Return Policy
+            </h1>
+            <div className="space-y-10">
+              <div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We have a no return policy. Once the refund request is approved , the refunded amount would be processed and credited to the original mode of payment within 5 business days
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
