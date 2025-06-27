@@ -35,7 +35,7 @@ export default function Navbar() {
             <Link href="/cart">
               <ShoppingCart className="h-5 w-5" />
               {cartCount > 0 && (
-                <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 justify-center p-0">{cartCount}</Badge>
+                <Badge variant="default" className="absolute -top-2 -right-2 h-5 w-5 justify-center p-0">{cartCount}</Badge>
               )}
             </Link>
           </Button>
