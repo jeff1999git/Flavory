@@ -25,7 +25,7 @@ const policyLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Privacy Policy', href: '/about#privacy-policy' },
     { name: 'Refund & Return Policy', href: '/about#refund-policy' },
-    { name: 'Shipping Policy', href: '#' },
+    { name: 'Shipping Policy', href: '/about#shipping-policy' },
     { name: 'Terms Of Service', href: '#' },
 ]
 
