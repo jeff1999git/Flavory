@@ -13,24 +13,10 @@ const socialLinks = [
 
 const linkSections = [
   {
-    title: 'Categories',
-    links: [
-      { name: 'Powders', href: '#' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { name: 'Contact Us', href: '#' },
-      { name: 'About Us', href: '#' },
-      { name: 'Shipping Policy', href: '#' },
-    ],
-  },
-  {
     title: 'Company',
     links: [
       { name: 'Home', href: '/' },
-      { name: 'About', href: '#' },
+      { name: 'About Us', href: '#' },
     ],
   },
 ];
@@ -46,8 +32,8 @@ export default function Footer() {
   return (
     <footer className="bg-background border-t mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8">
-          <div className="md:col-span-1 lg:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="md:col-span-2">
             <Link href="/" className="mb-4 inline-block">
               <Image
                 src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png"
