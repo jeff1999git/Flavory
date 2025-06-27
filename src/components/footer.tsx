@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Instagram, Youtube, Phone, Mail, Facebook, MessageSquare } from 'lucide-react';
@@ -20,7 +21,7 @@ const linkSections = [
 ];
 
 const policyLinks = [
-    { name: 'About Us', href: '#' },
+    { name: 'About Us', href: '/about' },
     { name: 'Privacy Policy', href: '#' },
     { name: 'Refund & Return Policy', href: '#' },
     { name: 'Shipping Policy', href: '#' },
