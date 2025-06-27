@@ -32,8 +32,9 @@ const policyLinks = [
 export default function Footer() {
   return (
     <footer className="bg-background border-t mt-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+          
           <div>
             <Link href="/" className="mb-4 inline-block">
               <Image
@@ -44,7 +45,7 @@ export default function Footer() {
                 data-ai-hint="logo"
               />
             </Link>
-            <div className="flex flex-wrap gap-4 mt-4">
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               {socialLinks.map((social) => (
                 <Link key={social.name} href={social.href} className="text-muted-foreground hover:text-primary" aria-label={social.name} target="_blank" rel="noopener noreferrer">
                   {social.icon}
@@ -53,14 +54,14 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:justify-self-end">
+          <div className="md:text-right">
             {linkSections.map((section) => (
               <div key={section.title}>
                 <h3 className="font-bold text-foreground mb-4">{section.title}</h3>
                 <ul className="space-y-2">
                   {section.links.map((link) => (
                     <li key={link.name}>
-                      <Link href={link.href} className="flex items-center text-muted-foreground hover:text-primary text-sm">
+                      <Link href={link.href} className="flex items-center justify-center md:justify-end text-muted-foreground hover:text-primary text-sm">
                         {link.icon && <span className="mr-2">{link.icon}</span>}
                         {link.name}
                       </Link>
