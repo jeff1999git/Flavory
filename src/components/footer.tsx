@@ -26,7 +26,7 @@ const policyLinks = [
     { name: 'Privacy Policy', href: '/about#privacy-policy' },
     { name: 'Refund & Return Policy', href: '/about#refund-policy' },
     { name: 'Shipping Policy', href: '/about#shipping-policy' },
-    { name: 'Terms Of Service', href: '#' },
+    { name: 'Terms Of Service', href: '/about#terms-of-service' },
 ]
 
 export default function Footer() {

@@ -229,6 +229,81 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+
+          <Separator className="my-16" />
+
+          <div id="terms-of-service" className="scroll-mt-20">
+            <h1 className="font-headline text-4xl md:text-5xl font-bold mb-12 text-center">
+              Terms of Service
+            </h1>
+            <div className="space-y-10">
+              <div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  By accessing or using our website or services, you agree to comply with the following Terms of Service.
+                </p>
+              </div>
+              <div>
+                <h2 className="font-headline text-3xl font-bold mb-4">1. User Agreement</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  By using the Flavory website or any of our services, you agree to be bound by these Terms of Service. Please read them carefully before using the platform.
+                </p>
+              </div>
+              <div>
+                <h2 className="font-headline text-3xl font-bold mb-4">2. Eligibility</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our services are intended for individuals who meet the legal and platform-specific eligibility criteria. By using our services, you confirm that you meet these requirements.
+                </p>
+              </div>
+              <div>
+                <h2 className="font-headline text-3xl font-bold mb-4">3. Account Creation</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Some features of our website may require you to create an account. You agree to provide accurate and complete information and to comply with our account guidelines at all times.
+                </p>
+              </div>
+              <div>
+                <h2 className="font-headline text-3xl font-bold mb-4">4. User Responsibilities</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  You are solely responsible for your actions while using our platform. You agree to act responsibly, respect other users, and follow any posted guidelines or community standards.
+                </p>
+              </div>
+              <div>
+                <h2 className="font-headline text-3xl font-bold mb-4">5. Intellectual Property</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  All content, logos, product names, designs, trademarks, and copyrights on the Flavory platform are the property of Calicut Cousins Private Limited or its licensors, and are protected under applicable intellectual property laws.
+                </p>
+              </div>
+              <div>
+                <h2 className="font-headline text-3xl font-bold mb-4">6. Payment and Refunds</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Payments must be made through the methods available on our website. We offer refunds or product replacements based on specific circumstances. All refund or return decisions are subject to our discretion and governed by our official Refund Policy.
+                </p>
+              </div>
+              <div>
+                <h2 className="font-headline text-3xl font-bold mb-4">7. Delivery Delays</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  While we aim to provide prompt delivery, delays may occur due to factors beyond our control—such as courier service interruptions. We will always work to resolve such issues swiftly.
+                </p>
+              </div>
+              <div>
+                <h2 className="font-headline text-3xl font-bold mb-4">8. Dispute Resolution</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Any disputes between users or involving Flavory will be governed by the laws of India. Disputes shall be subject to the jurisdiction of the courts located in Kerala, unless otherwise specified.
+                </p>
+              </div>
+              <div>
+                <h2 className="font-headline text-3xl font-bold mb-4">9. Updates to Terms</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We reserve the right to modify or update these Terms of Service at any time. Changes will be posted on this page, and it is your responsibility to stay informed of updates.
+                </p>
+              </div>
+              <div>
+                <h2 className="font-headline text-3xl font-bold mb-4">10. Governing Law</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  These Terms are governed by and interpreted in accordance with the laws of India. For details on how we collect and use data, please refer to our Privacy Policy.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
