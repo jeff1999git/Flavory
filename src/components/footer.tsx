@@ -13,13 +13,6 @@ const socialLinks = [
 
 const linkSections = [
   {
-    title: 'Company',
-    links: [
-      { name: 'Home', href: '/' },
-      { name: 'About Us', href: '#' },
-    ],
-  },
-  {
     title: 'Contact Us',
     links: [
       { name: 'contactflavory@gmail.com', href: 'mailto:contactflavory@gmail.com' },
@@ -29,6 +22,7 @@ const linkSections = [
 ];
 
 const policyLinks = [
+    { name: 'About Us', href: '#' },
     { name: 'Privacy Policy', href: '#' },
     { name: 'Refund & Return Policy', href: '#' },
     { name: 'Shipping Policy', href: '#' },
