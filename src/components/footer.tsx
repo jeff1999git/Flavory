@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Youtube, Phone } from 'lucide-react';
+import { Instagram, Youtube, Phone, Mail } from 'lucide-react';
 
 const socialLinks = [
   { icon: <Instagram className="h-6 w-6" />, href: '#', name: 'Instagram' },
@@ -11,7 +11,7 @@ const linkSections = [
   {
     title: 'Contact Us',
     links: [
-      { name: 'contactflavory@gmail.com', href: 'mailto:contactflavory@gmail.com' },
+      { name: 'contactflavory@gmail.com', href: 'mailto:contactflavory@gmail.com', icon: <Mail className="h-4 w-4" /> },
       { name: '+91 95671 10457', href: 'tel:+919567110457', icon: <Phone className="h-4 w-4" /> },
     ],
   },
