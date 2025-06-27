@@ -22,10 +22,10 @@ export default function Navbar() {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
            <Link href="/">
             <Image
-              src="https://placehold.co/120x40.png"
+              src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png"
               alt="Flavory Logo"
-              width={120}
-              height={40}
+              width={50}
+              height={50}
               data-ai-hint="logo"
             />
            </Link>
