@@ -5,7 +5,7 @@ import { Instagram, Youtube, Phone, Mail, Facebook } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 
 const socialLinks = [
-  { icon: <Instagram className="h-6 w-6" />, href: '#', name: 'Instagram' },
+  { icon: <Instagram className="h-6 w-6" />, href: 'https://www.instagram.com/flavory.in_?igsh=MTIzNWoxNTV0aHhz', name: 'Instagram' },
   { icon: <Youtube className="h-6 w-6" />, href: '#', name: 'Youtube' },
   { icon: <Facebook className="h-6 w-6" />, href: '#', name: 'Facebook' },
 ];
@@ -46,7 +46,7 @@ export default function Footer() {
             </Link>
             <div className="flex flex-wrap gap-4 mt-4">
               {socialLinks.map((social) => (
-                <Link key={social.name} href={social.href} className="text-muted-foreground hover:text-primary" aria-label={social.name}>
+                <Link key={social.name} href={social.href} className="text-muted-foreground hover:text-primary" aria-label={social.name} target="_blank" rel="noopener noreferrer">
                   {social.icon}
                 </Link>
               ))}
