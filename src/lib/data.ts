@@ -12,7 +12,7 @@ export const products: Product[] = [
       title: 'Green Chilli Powder',
       tagline: 'Pure. Spicy. Powerful.',
       description: 'Bring bold heat and natural health to your meals with Flavory’s premium Green Chilli Powder, made from farm-fresh green chillies — finely ground to preserve flavor, color, and potency.',
-      detailImageUrl: 'https://res.cloudinary.com/doelglurk/image/upload/v1751057298/20250628_0210_Indian_Curry_Delight_remix_01jyshtqtbepfacecan99882fc_aejd0y.png',
+      detailImageUrl: 'https://res.cloudinary.com/doelglurk/image/upload/v1751058128/20250628_0230_Curry_with_Chilli_Powder_remix_01jysk0kxbfrx9hmz6qpvpe2ae_tze6fc.png',
       benefits: [
         'Rich in Antioxidants – Boosts immunity and helps fight free radicals',
         'Metabolism Booster – Naturally supports fat burning',
