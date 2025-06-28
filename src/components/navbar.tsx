@@ -21,11 +21,11 @@ export default function Navbar() {
         </div>
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
            <Link href="/" className="flex items-center gap-2">
-             <Image src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png" alt="Flavory logo" width={40} height={40} />
+             <Image src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png" alt="Flavory logo" width={150} height={150} />
            </Link>
         </div>
         <div className="flex items-center gap-2">
-          <Button asChild variant="ghost" size="icon" aria-label="Shopping cart" className="relative">
+          <Button asChild variant="outline" size="icon" aria-label="Shopping cart" className="relative">
             <Link href="/cart">
               <ShoppingCart className="h-5 w-5" />
               {cartCount > 0 && (
