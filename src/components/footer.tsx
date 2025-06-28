@@ -37,7 +37,6 @@ export default function Footer() {
           <div>
             <Link href="/" className="mb-4 inline-flex items-center gap-2">
               <Image src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png" alt="Flavory logo" width={32} height={32} />
-              <span className="text-xl font-bold font-headline text-primary">Flavory</span>
             </Link>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               {socialLinks.map((social) => (
