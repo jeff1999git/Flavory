@@ -11,6 +11,7 @@ import { useCart } from '@/context/cart-context';
 import { Check, Plus, Minus, Package, Sprout, Soup, Info, Truck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
+import StarRating from '@/components/star-rating';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -125,7 +126,15 @@ export default function ProductDetailPage() {
 
           <div className="space-y-8">
             <div>
-              <h1 className="text-4xl font-extrabold font-headline leading-tight">{details.title}</h1>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <h1 className="text-4xl font-extrabold font-headline leading-tight">{details.title}</h1>
+                {product.rating && product.reviewCount && (
+                  <div className="flex items-center gap-2">
+                    <StarRating rating={product.rating} />
+                    <span className="text-sm text-muted-foreground mt-1">({product.reviewCount} reviews)</span>
+                  </div>
+                )}
+              </div>
               <p className="text-xl text-muted-foreground mt-2 font-semibold">{details.tagline}</p>
               <p className="text-lg mt-4 leading-relaxed">{details.description}</p>
             </div>

@@ -20,4 +20,6 @@ export interface Product {
   highlighted?: boolean;
   dataAiHint: string;
   details?: ProductDetails;
+  rating?: number;
+  reviewCount?: number;
 }

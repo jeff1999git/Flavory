@@ -8,6 +8,7 @@ import { Plus, Minus } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useCart } from '@/context/cart-context';
 import Link from 'next/link';
+import StarRating from './star-rating';
 
 export default function ProductCard({ product }: { product: Product }) {
   const { addToCart, updateQuantity, cartItems } = useCart();
@@ -58,7 +59,14 @@ export default function ProductCard({ product }: { product: Product }) {
             {product.description}
           </p>
           
-          <div className="flex justify-between items-center w-full mt-8">
+          {product.rating && product.reviewCount && (
+            <div className="flex items-center justify-center gap-2 mt-2">
+              <StarRating rating={product.rating} />
+              <span className={cn("text-xs", product.highlighted ? "text-primary-foreground/80" : "text-muted-foreground")}>({product.reviewCount})</span>
+            </div>
+          )}
+
+          <div className="flex justify-between items-center w-full mt-auto pt-4">
             <span className="text-2xl font-bold font-mono">
               {formatPrice(product.price)}
             </span>
