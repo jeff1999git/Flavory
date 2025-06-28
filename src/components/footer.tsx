@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Instagram, Youtube, Phone, Mail, Facebook, Leaf } from 'lucide-react';
+import { Instagram, Youtube, Phone, Mail, Facebook } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 
 const socialLinks = [
@@ -36,7 +36,6 @@ export default function Footer() {
           
           <div>
             <Link href="/" className="mb-4 inline-flex items-center gap-2 text-primary">
-              <Leaf className="h-7 w-7" />
               <span className="text-xl font-bold font-headline">Flavory</span>
             </Link>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">

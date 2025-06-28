@@ -1,10 +1,11 @@
 'use client';
 
-import { ShoppingCart, Leaf } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
 
 export default function Navbar() {
   const { getCartCount } = useCart();
@@ -20,7 +21,6 @@ export default function Navbar() {
         </div>
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
            <Link href="/" className="flex items-center gap-2 text-primary">
-             <Leaf className="h-8 w-8" />
              <span className="text-2xl font-bold font-headline">Flavory</span>
            </Link>
         </div>
