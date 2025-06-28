@@ -6,7 +6,7 @@ import { MessageSquare } from 'lucide-react';
 const socialLinks = [
   { icon: <Instagram className="h-6 w-6" />, href: 'https://www.instagram.com/flavory.in_?igsh=MTIzNWoxNTV0aHhz', name: 'Instagram' },
   { icon: <Youtube className="h-6 w-6" />, href: '#', name: 'Youtube' },
-  { icon: <Facebook className="h-6 w-6" />, href: '#', name: 'Facebook' },
+  { icon: <Facebook className="h-6 w-6" />, href: 'https://www.facebook.com/share/16ij7MKNVa/', name: 'Facebook' },
 ];
 
 const linkSections = [
