@@ -39,7 +39,7 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link href={`/products/${product.id}`} className="block w-full max-w-[17rem]">
       <Card className={cn(
-        "flex flex-col text-center items-center p-6 rounded-3xl shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 overflow-visible h-full",
+        "flex flex-col text-center items-center p-6 rounded-3xl shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 hover:shadow-xl overflow-visible h-full",
         product.highlighted ? "bg-primary text-primary-foreground" : "bg-card text-card-foreground"
       )}>
         <div className="relative w-full h-36">
