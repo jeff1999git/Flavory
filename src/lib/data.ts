@@ -8,8 +8,8 @@ export const products: Product[] = [
     description: 'Rich in vitamin C, vitamin A, iron, and antioxidants.',
     imageUrl: 'https://res.cloudinary.com/doelglurk/image/upload/v1751051734/20250625_2359_Green_Chilli_Pouch_Design_remix_01jym5h04aev0b2vjg7ctdxcrv-removebg-preview_zkuuk0.png',
     dataAiHint: 'chilli powder',
-    rating: 4.5,
-    reviewCount: 132,
+    rating: 4,
+    reviewCount: 47,
     details: {
       title: 'Green Chilli Powder',
       tagline: 'Pure. Spicy. Powerful.',
