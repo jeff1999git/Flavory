@@ -1,7 +1,6 @@
 
-import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Youtube, Phone, Mail, Facebook } from 'lucide-react';
+import { Instagram, Youtube, Phone, Mail, Facebook, Leaf } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 
 const socialLinks = [
@@ -36,14 +35,9 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
           
           <div>
-            <Link href="/" className="mb-4 inline-block">
-              <Image
-                src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png"
-                alt="Flavory Logo"
-                width={120}
-                height={40}
-                data-ai-hint="logo"
-              />
+            <Link href="/" className="mb-4 inline-flex items-center gap-2 text-primary">
+              <Leaf className="h-7 w-7" />
+              <span className="text-xl font-bold font-headline">Flavory</span>
             </Link>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               {socialLinks.map((social) => (

@@ -1,8 +1,7 @@
 'use client';
 
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Leaf } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import { Badge } from '@/components/ui/badge';
@@ -20,14 +19,9 @@ export default function Navbar() {
           </Button>
         </div>
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-           <Link href="/">
-            <Image
-              src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png"
-              alt="Flavory Logo"
-              width={150}
-              height={150}
-              data-ai-hint="logo"
-            />
+           <Link href="/" className="flex items-center gap-2 text-primary">
+             <Leaf className="h-8 w-8" />
+             <span className="text-2xl font-bold font-headline">Flavory</span>
            </Link>
         </div>
         <div className="flex items-center gap-2">
