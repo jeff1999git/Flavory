@@ -20,8 +20,9 @@ export default function Navbar() {
           </Button>
         </div>
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-           <Link href="/" className="flex items-center gap-2 text-primary">
-             <span className="text-2xl font-bold font-headline">Flavory</span>
+           <Link href="/" className="flex items-center gap-2">
+             <Image src="https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png" alt="Flavory logo" width={40} height={40} />
+             <span className="text-2xl font-bold font-headline text-primary">Flavory</span>
            </Link>
         </div>
         <div className="flex items-center gap-2">

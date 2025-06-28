@@ -6,6 +6,9 @@ import { CartProvider } from '@/context/cart-context';
 export const metadata: Metadata = {
   title: 'Flavory',
   description: 'Start Fresh, Start Pure',
+  icons: {
+    icon: 'https://res.cloudinary.com/doelglurk/image/upload/v1751048180/icon_zpammo.png',
+  }
 };
 
 export default function RootLayout({
