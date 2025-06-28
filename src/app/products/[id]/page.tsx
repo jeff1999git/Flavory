@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useParams } from 'next/navigation';
@@ -69,8 +68,8 @@ export default function ProductDetailPage() {
               <Image
                 src={details.detailImageUrl}
                 alt={product.name}
-                layout="fill"
-                objectFit="cover"
+                fill
+                className="object-cover"
                 data-ai-hint="indian food"
               />
             </div>
