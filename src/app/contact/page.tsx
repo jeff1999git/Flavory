@@ -20,7 +20,7 @@ export default function ContactPage() {
 
           <div className="flex flex-col gap-4">
             <Button asChild size="lg">
-              <Link href="https://wa.me/919567110457" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/918848661154" target="_blank" rel="noopener noreferrer">
                 <MessageSquare className="mr-2 h-5 w-5" />
                 Chat with us on WhatsApp
               </Link>
